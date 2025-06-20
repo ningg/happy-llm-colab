@@ -9,7 +9,10 @@ cd - > /dev/null
 python ./python/md2ipynb_out.py
 
 # 3. 执行 copy_images_to_outipynb.py
-python ./pythoncopy_images_to_outipynb.py
+python ./python/copy_images_to_outipynb.py
 
 # 4. 执行 copy_ext_to_outipynb.py
-python ./pythoncopy_ext_to_outipynb.py
+python ./python/copy_ext_to_outipynb.py
+
+# 5. 替换 md 链接
+python python/replace_readme_md_to_ipynb.py
