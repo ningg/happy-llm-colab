@@ -1,6 +1,8 @@
-# happy-llm-colab （colab 上，实践 happy-llm）
+# happy-llm-colab （Colab 上，实践 happy-llm）
 
-> colab 上，可以直接运行 happy-llm 代码，细节参考[什么是 Colab？](https://colab.research.google.com/notebooks/intro.ipynb#scrollTo=5fCEDCU_qrC0)
+## 1.Colab 简介
+
+> Colab 上，直接运行 happy-llm 代码，细节参考 [什么是 Colab？](https://colab.research.google.com/notebooks/intro.ipynb#scrollTo=5fCEDCU_qrC0)
 > 
 > 借助 Colaboratory（简称 `Colab`），您可在浏览器中**编写**和**执行** `Python 代码`，并且：
 > 
@@ -8,8 +10,10 @@
 > * 免费使用 GPU
 > * 轻松共享
 > 
-> 无论您是一名学生、数据科学家还是 AI 研究员，Colab 都能够帮助您更轻松地完成工作。您可以观看 [Introduction to Colab](https://www.youtube.com/watch?v=inN8seMm7UI)（Colab 简介）或 [Colab Features You May Have Missed](https://www.youtube.com/watch?v=rNgswRZ2C1Y)（您可能错过的 Colab 功能）了解详情！
+> 无论您是一名学生、数据科学家还是 AI 研究员，Colab 都能够帮助您更轻松地完成工作。观看 [Introduction to Colab](https://www.youtube.com/watch?v=inN8seMm7UI)
 
+
+## 2.目标
 
 **背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 `colab` 直接实践，效率偏低。
 
@@ -21,9 +25,9 @@
 ![](./happy-llm-colab.png)
 
 
-## 📖 内容导航
+## 3.📖 内容导航
 
-> *Tips*： 直接点击下面`链接`，就会跳转到 `colab` 平台，直接运行 happy-llm 对应代码.
+> ***Tips***： 直接点击下面`链接`，就会跳转到 `colab` 平台，直接运行 happy-llm 对应代码.
 
 | 章节 | 关键内容 | 状态 |
 | --- | --- | --- |
