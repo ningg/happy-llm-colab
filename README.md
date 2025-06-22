@@ -1,4 +1,4 @@
-# happy-llm-colab
+# happy-llm-colab （colab 版本 happy-llm）
 
 
 **背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 colab 直接实践，效率偏低。
