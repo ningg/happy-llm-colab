@@ -15,7 +15,7 @@
 
 ## 2.目标
 
-**背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 `colab` 直接实践，效率偏低。
+**背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 `colab` 运行，效率低。
 
 **焦点**：编写脚本，生成 [happy-llm-colab](https://github.com/ningg/happy-llm-colab) (**happy-llm 的 colab 版本项目**)，用于在 colab 上直接实践 happy-llm 代码。
 
