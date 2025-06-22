@@ -13,7 +13,7 @@
 
 **背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 `colab` 直接实践，效率偏低。
 
-**焦点**：编写脚本，生成 [happy-llm-colab](https://github.com/ningg/happy-llm-colab) (**happy-llm 的 colab 版本项目**)，方便快速实践。
+**焦点**：编写脚本，生成 [happy-llm-colab](https://github.com/ningg/happy-llm-colab) (**happy-llm 的 colab 版本项目**)，用于在 colab 上直接实践 happy-llm 代码。
 
 **备注**：这个项目，会跟 happy-llm 保持`周级别`更新。
 
@@ -23,7 +23,7 @@
 
 ## 📖 内容导航
 
-> *Tips*： 直接点击下面`链接`，就会跳转到 `colab` 平台.
+> *Tips*： 直接点击下面`链接`，就会跳转到 `colab` 平台，直接运行 happy-llm 对应代码.
 
 | 章节 | 关键内容 | 状态 |
 | --- | --- | --- |
