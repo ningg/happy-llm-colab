@@ -1,9 +1,19 @@
-# happy-llm-colab （colab 版本 happy-llm）
+# happy-llm-colab （colab 上，实践 happy-llm）
+
+> colab 上，可以直接运行 happy-llm 代码，细节参考[什么是 Colab？](https://colab.research.google.com/notebooks/intro.ipynb#scrollTo=5fCEDCU_qrC0)
+> 
+> 借助 Colaboratory（简称 `Colab`），您可在浏览器中**编写**和**执行** `Python 代码`，并且：
+> 
+> * 无需任何配置 
+> * 免费使用 GPU
+> * 轻松共享
+> 
+> 无论您是一名学生、数据科学家还是 AI 研究员，Colab 都能够帮助您更轻松地完成工作。您可以观看 [Introduction to Colab](https://www.youtube.com/watch?v=inN8seMm7UI)（Colab 简介）或 [Colab Features You May Have Missed](https://www.youtube.com/watch?v=rNgswRZ2C1Y)（您可能错过的 Colab 功能）了解详情！
 
 
-**背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 colab 直接实践，效率偏低。
+**背景**：原始项目[happy-llm](https://github.com/datawhalechina/happy-llm) 不是 `ipynb` 格式文件，无法直接利用 `colab` 直接实践，效率偏低。
 
-**焦点**：编写脚本，生成 [happy-llm-colab](https://github.com/ningg/happy-llm-colab) (**happy-llm 的 colab 版本项目**)，方便快速实践。
+**焦点**：编写脚本，生成 [happy-llm-colab](https://github.com/ningg/happy-llm-colab) (**happy-llm 的 colab 版本项目**)，用于在 colab 上直接实践 happy-llm 代码。
 
 **备注**：这个项目，会跟 happy-llm 保持`周级别`更新。
 
@@ -13,7 +23,7 @@
 
 ## 📖 内容导航
 
->** Tips**： 直接点击下面`链接`，就会跳转到 `colab` 平台.
+> *Tips*： 直接点击下面`链接`，就会跳转到 `colab` 平台，直接运行 happy-llm 对应代码.
 
 | 章节 | 关键内容 | 状态 |
 | --- | --- | --- |
