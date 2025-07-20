@@ -39,6 +39,7 @@
 | [第五章 动手搭建大模型](https://colab.research.google.com/github/ningg/happy-llm-colab/blob/main/docs/chapter5/第五章%20动手搭建大模型.ipynb) | 实现 LLaMA2、训练 Tokenizer、预训练小型 LLM | ✅ |
 | [第六章 大模型训练实践](https://colab.research.google.com/github/ningg/happy-llm-colab/blob/main/docs/chapter6/第六章%20大模型训练流程实践.ipynb) | 预训练、有监督微调、LoRA/QLoRA 高效微调 | 🚧 |
 | [第七章 大模型应用](https://colab.research.google.com/github/ningg/happy-llm-colab/blob/main/docs/chapter7/第七章%20大模型应用.ipynb) | 模型评测、RAG 检索增强、Agent 智能体 | ✅ |
+| [Extra Chapter LLM Blog](./Extra-Chapter/) | 优秀的大模型 学习笔记/Blog ，欢迎大家来 PR ！| 🚧 |
 
 
 
