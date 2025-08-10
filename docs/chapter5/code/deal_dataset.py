@@ -41,7 +41,7 @@ def convert_message(data):
     return message
 
 with open(output_sft_data, 'a', encoding='utf-8') as sft:
-    with open(sft_data, 'r') as f:
+    with open(sft_data, 'r', encoding='utf-8') as f:
         data = f.readlines()
         for item in tqdm(data, desc="Processing", unit="lines"):
             item = json.loads(item)

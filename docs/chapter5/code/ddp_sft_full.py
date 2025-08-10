@@ -196,7 +196,6 @@ if __name__ == "__main__":
     )
     max_seq_len = lm_config.max_seq_len
     args.save_dir = os.path.join(args.out_dir)
-    os.makedirs(args.save_dir, exist_ok=True)
     os.makedirs(args.out_dir, exist_ok=True)
     torch.manual_seed(42)
     device_type = "cuda" if "cuda" in args.device else "cpu"
