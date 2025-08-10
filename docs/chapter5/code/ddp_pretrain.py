@@ -277,7 +277,6 @@ if __name__ == "__main__":
     args.save_dir = os.path.join(args.out_dir)  # 模型保存目录
     
     # 创建必要的目录
-    os.makedirs(args.save_dir, exist_ok=True)
     os.makedirs(args.out_dir, exist_ok=True)
     
     # 设置随机种子以确保结果可复现

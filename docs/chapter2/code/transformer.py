@@ -36,11 +36,11 @@ class MultiHeadAttention(nn.Module):
         # Wq, Wk, Wv 参数矩阵，每个参数矩阵为 n_embd x n_embd
         # 这里通过三个组合矩阵来代替了n个参数矩阵的组合，其逻辑在于矩阵内积再拼接其实等同于拼接矩阵再内积，
         # 不理解的读者可以自行模拟一下，每一个线性层其实相当于n个参数矩阵的拼接
-        self.wq = nn.Linear(args.n_embd, args.n_heads * self.head_dim, bias=False)
-        self.wk = nn.Linear(args.n_embd, args.n_heads * self.head_dim, bias=False)
-        self.wv = nn.Linear(args.n_embd, args.n_heads * self.head_dim, bias=False)
+        self.wq = nn.Linear(args.n_embd, self.n_local_heads * self.head_dim, bias=False)
+        self.wk = nn.Linear(args.n_embd, self.n_local_heads * self.head_dim, bias=False)
+        self.wv = nn.Linear(args.n_embd, self.n_local_heads * self.head_dim, bias=False)
         # 输出权重矩阵，维度为 dim x n_embd（head_dim = n_embeds / n_heads）
-        self.wo = nn.Linear(args.n_heads * self.head_dim, args.dim, bias=False)
+        self.wo = nn.Linear(self.n_local_heads * self.head_dim, args.dim, bias=False)
         # 注意力的 dropout
         self.attn_dropout = nn.Dropout(args.dropout)
         # 残差连接的 dropout
@@ -103,7 +103,7 @@ class MultiHeadAttention(nn.Module):
 class LayerNorm(nn.Module):
     ''' Layer Norm 层'''
     def __init__(self, features, eps=1e-6):
-        super(LayerNorm, self).__init__()
+        super().__init__()
         # 线性矩阵做映射
         self.a_2 = nn.Parameter(torch.ones(features))
         self.b_2 = nn.Parameter(torch.zeros(features))
@@ -130,7 +130,6 @@ class MLP(nn.Module):
     def forward(self, x):
         # 前向传播函数
         # 首先，输入x通过第一层线性变换和RELU激活函数
-        # 然后，结果乘以输入x通过第三层线性变换的结果
         # 最后，通过第二层线性变换和dropout层
         return self.dropout(self.w2(F.relu(self.w1(x))))
     
@@ -215,7 +214,7 @@ class PositionalEncoding(nn.Module):
     def __init__(self, args):
         super(PositionalEncoding, self).__init__()
         # Dropout 层
-        self.dropout = nn.Dropout(p=args.dropout)
+        # self.dropout = nn.Dropout(p=args.dropout)
 
         # block size 是序列的最大长度
         pe = torch.zeros(args.block_size, args.n_embd)
@@ -233,7 +232,7 @@ class PositionalEncoding(nn.Module):
     def forward(self, x):
         # 将位置编码加到 Embedding 结果上
         x = x + self.pe[:, : x.size(1)].requires_grad_(False)
-        return self.dropout(x)
+        return x
 
 
 class Transformer(nn.Module):
@@ -268,7 +267,7 @@ class Transformer(nn.Module):
         n_params = sum(p.numel() for p in self.parameters())
         # 如果不统计 embedding 的参数，就减去
         if non_embedding:
-            n_params -= self.transformer.wpe.weight.numel()
+            n_params -= self.transformer.wte.weight.numel()
         return n_params
 
     '''初始化权重'''
