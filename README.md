@@ -42,6 +42,21 @@
 | [Extra Chapter LLM Blog](./Extra-Chapter/) | 优秀的大模型 学习笔记/Blog ，欢迎大家来 PR ！| 🚧 |
 
 
+### Extra Chapter LLM Blog
+
+- [大模型都这么厉害了，微调0.6B的小模型有什么意义？](./Extra-Chapter/why-fine-tune-small-large-language-models/readme.ipynb) @[不要葱姜蒜](https://github.com/KMnO4-zx) 2025-7-11
+
+- [Transformer 整体模块设计解读](./Extra-Chapter/transformer-architecture/readme.ipynb) @[ditingdapeng](https://github.com/ditingdapeng) 2025-7-14
+
+- [文本数据处理详解](./Extra-Chapter/text-data-processing/readme.ipynb) @[蔡鋆捷](https://github.com/xinala-781) 2025-7-14
+
+- [Qwen3-"VL"——超小中文多模态模型的“拼接微调”之路](./Extra-Chapter/vlm-concatenation-finetune/README.ipynb) @[ShaohonChen](https://github.com/ShaohonChen) 2025-7-30
+
+- [S1: Thinking Budget with vLLM](./Extra-Chapter/s1-vllm-thinking-budget/readme.ipynb) @[kmno4-zx](https://github.com/kmno4-zx) 2025-8-03
+
+
+- [CDDRS: 使用细粒度语义信息指导增强的RAG检索方法](./Extra-Chapter/CDDRS/readme.ipynb) @[Hongru0306](https://github.com/Hongru0306) 2025-8-21
+
 
 ## 附录：happy-llm 生成 happy-llm-colab 的脚本
 
