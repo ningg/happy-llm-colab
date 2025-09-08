@@ -53,6 +53,7 @@ def md_to_ipynb(md_path, ipynb_path):
 
     code_block_pattern = re.compile(r'^```(\w*)')
     code_block_end_pattern = re.compile(r'^```$')
+    header_pattern = re.compile(r'^#+\s+')
 
     # 获取现有的cell ID
     existing_ids = get_existing_cell_ids(ipynb_path)
@@ -61,6 +62,7 @@ def md_to_ipynb(md_path, ipynb_path):
     for line in lines:
         code_block_start = code_block_pattern.match(line)
         code_block_end = code_block_end_pattern.match(line)
+        is_header = header_pattern.match(line)
 
         if not in_code_block and code_block_start:
             # 进入代码块
@@ -84,6 +86,18 @@ def md_to_ipynb(md_path, ipynb_path):
             code_block_lang = ''
         elif in_code_block:
             code_lines.append(line)
+        elif is_header:
+            # 遇到标题，先保存之前的md内容（如果有）
+            if md_lines:
+                cell_id = existing_ids[current_id_index] if existing_ids and current_id_index < len(existing_ids) else None
+                cells.append(create_cell_with_id('markdown', ''.join(md_lines).rstrip(), cell_id))
+                current_id_index += 1
+                md_lines = []
+            # 标题独占一个cell
+            line = re.sub(r'!\[\]\(/img', '![](../img', line)
+            cell_id = existing_ids[current_id_index] if existing_ids and current_id_index < len(existing_ids) else None
+            cells.append(create_cell_with_id('markdown', line.rstrip(), cell_id))
+            current_id_index += 1
         else:
             md_lines.append(line)
 
