@@ -1,7 +1,7 @@
 transformers
 datasets
 torch
-torchdata
+torchdata==0.9.0
 deepspeed
 pandas
 swanlab
