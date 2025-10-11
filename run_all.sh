@@ -12,6 +12,9 @@ if [ "$current_dir" = "happy-llm-colab" ]; then
     else
         echo "当前已经在 auto-ipynb 分支。"
     fi
+else
+    echo "需要先前往目录 happy-llm-colab ，然后重新执行命令。"
+    exit 1
 fi
 
 
