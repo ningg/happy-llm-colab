@@ -51,7 +51,24 @@ class Agent:
             stream=False,
         )
         if response.choices[0].message.tool_calls:
-            self.messages.append({"role": "assistant", "content": response.choices[0].message.content})
+            # 将包含 tool_calls 的完整 assistant 消息添加到历史中
+            assistant_message = {
+                "role": "assistant",
+                "content": response.choices[0].message.content,
+                "tool_calls": [
+                    {
+                        "id": tool_call.id,
+                        "type": "function",
+                        "function": {
+                            "name": tool_call.function.name,
+                            "arguments": tool_call.function.arguments
+                        }
+                    }
+                    for tool_call in response.choices[0].message.tool_calls
+                ]
+            }
+            self.messages.append(assistant_message)
+
             # 处理工具调用
             tool_list = []
             for tool_call in response.choices[0].message.tool_calls:
